@@ -1,0 +1,13 @@
+body {
+	margin:  20px;	
+}
+
+.input-group {
+	width:50%;
+	margin: 10px;
+}
+
+#giveUp {
+	position: absolute;
+	right: 100px;
+}
