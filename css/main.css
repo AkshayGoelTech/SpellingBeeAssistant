@@ -11,3 +11,7 @@ body {
 	position: absolute;
 	right: 100px;
 }
+
+button, .btn {
+	margin-bottom: 10px;
+}

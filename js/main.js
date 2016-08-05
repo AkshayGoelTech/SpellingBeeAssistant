@@ -1,12 +1,11 @@
 $(document).ready(function() {
 	$('#words').val(getWordList());
-	var wordList = $('#words').val().split(' ');
+	var allWords = $('#words').val().split(' ');
+	var wordList = allWords;
 	var wrongArray = ['<b>List of Words Spelt Incorrectly</b>'];
 	var totalQues = 0;
 	var correctNum = 0;
-	var wrongNum = 0;
-
-	
+	var wrongNum = 0;	
     
 	$('#listen').click(function() {
 		var msg = new SpeechSynthesisUtterance($('#currentWord').text());
@@ -14,6 +13,18 @@ $(document).ready(function() {
 	})
 
 	$('#btnBlue').click(function(event) {
+
+		switch ($('#listSelect .active').children()[0].id) 
+		{
+			case 'option2' : wordList = allWords.slice(0, 0 + 100);
+				break;
+			case 'option3' : wordList = allWords.slice(100, 100 + 100);
+				break;
+			case 'option4' : wordList = allWords.slice(200, 200 + 97);
+				break;
+		}
+
+		debugger;
 		$('#giveUp').css('display', 'block');
 		$('#spellInput').css('display', '');
 		$('#correct').remove();

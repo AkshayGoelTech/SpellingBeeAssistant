@@ -29,6 +29,22 @@
 		<div class="jumbotron">
 		<button id="giveUp" class="btn btn-danger" style="float:right; display:none;">Give Up</button>
 		<center id="center">
+
+			<div class="btn-group" data-toggle="buttons" id="listSelect">
+			  <label class="btn btn-default active">
+			    <input type="radio" name="options" id="option1" autocomplete="off" checked> All Words (preselected)
+			  </label>
+			  <label class="btn btn-default">
+			    <input type="radio" name="options" id="option2" autocomplete="off"> First 100 Only
+			  </label>
+			  <label class="btn btn-default">
+			    <input type="radio" name="options" id="option3" autocomplete="off"> 100 ~ 200 Only
+			  </label>
+			  <label class="btn btn-default">
+			    <input type="radio" name="options" id="option4" autocomplete="off"> 200 ~ 300 Only
+			  </label>
+			</div>
+
 		  <div class="input-group" id="spellInput" style="display:none;"> 
 		  	<input class="form-control" placeholder="Enter Spelling..." id="userSpelling"> 
 		  	<span class="input-group-btn"> <button class="btn btn-default" type="button" id="goBtn">Check Spelling</button></span> 
