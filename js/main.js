@@ -16,11 +16,15 @@ $(document).ready(function() {
 
 		switch ($('#listSelect .active').children()[0].id) 
 		{
-			case 'option2' : wordList = allWords.slice(0, 0 + 100);
+			case 'option2' : wordList = allWords.slice(0, 20);
 				break;
-			case 'option3' : wordList = allWords.slice(100, 100 + 100);
+			case 'option3' : wordList = allWords.slice(20, 40);
 				break;
-			case 'option4' : wordList = allWords.slice(200, 200 + 97);
+			case 'option4' : wordList = allWords.slice(40, 60);
+				break;
+			case 'option5' : wordList = allWords.slice(60, 80);
+				break;
+			case 'option6' : wordList = allWords.slice(80, 101);
 				break;
 		}
 
@@ -38,6 +42,7 @@ $(document).ready(function() {
 		$('#btnBlue').attr('disabled', true);
 		$('#currentWord').attr('hidden', true);
 		
+		debugger;
 		if ($('#wrongList a:last-child').text() != wrongArray[wrongArray.length - 1] &&
 			wrongArray.length != 1)
 			$('#wrongList').append('<a class="list-group-item">'+ wrongArray[wrongArray.length - 1] + '</a>');
